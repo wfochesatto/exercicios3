@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+/* FLEXBOX para centralizar o grid */
+.flex-container {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  flex-wrap: wrap; /* permite quebrar linha */
+  padding: 20px;
+}
+
+/* GRID para organizar as figuras */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  gap: 15px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+figure {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+figure img {
+  max-width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+figcaption {
+  margin-top: 6px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* MEDIA QUERY para telas menores */
+@media (max-width: 900px) {
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-galeria {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
+}
